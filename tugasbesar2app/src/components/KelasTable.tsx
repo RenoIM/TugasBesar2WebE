@@ -1,7 +1,14 @@
+interface Matakuliah {
+  id: number;
+  nama: string;
+}
+
 interface Kelas {
   id: number;
   nama_ruang: string;
+  matakuliah?: Matakuliah[]; // ← relasi dari join table
 }
+
 
 export default function KelasTable({
   kelas,
@@ -39,6 +46,13 @@ export default function KelasTable({
                         <p className="mb-0 text-sm font-medium leading-tight dark:text-white dark:opacity-90">
                           {k.nama_ruang}
                         </p>
+                        {k.matakuliah && k.matakuliah.length > 0 && (
+                          <ul className="mt-1 list-disc list-inside text-xs text-slate-500 dark:text-slate-300">
+                            {k.matakuliah.map((m) => (
+                              <li key={m.id}>{m.nama}</li>
+                            ))}
+                          </ul>
+                        )}
                       </td>
                       <td className="p-4 text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap">
                         <button

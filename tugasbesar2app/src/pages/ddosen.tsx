@@ -58,7 +58,7 @@ export default function Ddosen() {
             <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center fill-current stroke-0 text-center xl:p-2.5">
                 <i className="relative top-0 text-sm leading-normal text-emerald-500 ni ni-credit-card" />
             </div>
-            <span className="ml-1 duration-300 opacity-100 pointer-events-none ease">Mata Kuliah</span>
+            <span className="ml-1 duration-300 opacity-100 pointer-events-none ease">Modul</span>
             </a>
         </li>
       <li className="mt-0.5 w-full">

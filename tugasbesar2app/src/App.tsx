@@ -6,6 +6,7 @@ import Ddosen from "./pages/ddosen"
 import Register from "./pages/Register"
 import Dkelas from "./pages/dkelas"
 import Dmatakuliah from "./pages/dmatakuliah"
+import TransaksiKelasMatakuliah from "./pages/TransaksiKelasMatakuliah"
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/ddosen" element={<Ddosen/>}/>
         <Route path="/dkelas" element={<Dkelas/>}/>
         <Route path="/dmatakuliah" element={<Dmatakuliah/>}/>
+        <Route path="/transaksi" element={<TransaksiKelasMatakuliah />} />
       </Route>
     </Routes>
     </BrowserRouter>

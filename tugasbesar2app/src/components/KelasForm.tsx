@@ -69,7 +69,7 @@ export default function KelasForm({
 
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors"
+        className="w-full bg-blue-600 text-gray py-2 rounded-md hover:bg-blue-700 transition-colors"
       >
         {editData ? "Update" : "Tambah"}
       </button>

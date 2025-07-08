@@ -13,10 +13,23 @@ export default function Dkelas() {
   const [editData, setEditData] = useState<Kelas | null>(null);
 
   const fetchKelas = async () => {
-    const { data } = await supabase.from("kelas").select("*");
-    if (data) setKelas(data);
-  };
+  const { data, error } = await supabase
+    .from("kelas")
+    .select("*, kelas_matakuliah(matakuliah(*))");
 
+  if (error) {
+    console.error("Error fetching kelas:", error.message);
+    return;
+  }
+
+  const kelasWithMatakuliah = data.map((k) => ({
+    id: k.id,
+    nama_ruang: k.nama_ruang,
+    matakuliah: k.kelas_matakuliah.map((km: { matakuliah: any; }) => km.matakuliah),
+  }));
+
+  setKelas(kelasWithMatakuliah);
+  };
   const handleDelete = async (id: number) => {
     await supabase.from("kelas").delete().eq("id", id);
     fetchKelas();
@@ -56,7 +69,7 @@ export default function Dkelas() {
                 <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center fill-current stroke-0 text-center xl:p-2.5">
                     <i className="relative top-0 text-sm leading-normal text-emerald-500 ni ni-credit-card" />
                 </div>
-                <span className="ml-1 duration-300 opacity-100 pointer-events-none ease">Mata Kuliah</span>
+                <span className="ml-1 duration-300 opacity-100 pointer-events-none ease">Modul</span>
                 </a>
             </li>
           <li className="mt-0.5 w-full">
