@@ -7,7 +7,6 @@ import Dkelas from "./pages/dkelas"
 import Dmatakuliah from "./pages/dmatakuliah"
 import DashboardLayout from "./components/DashboardLayout"
 import Register from "./pages/Register"
-
 function App() {
 
   return (
@@ -20,9 +19,9 @@ function App() {
       </Route>
       <Route element={<DashboardLayout/>}>
         <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/home" element={<Ddosen/>}/>
-        <Route path="/home" element={<Dkelas/>}/>
-        <Route path="/home" element={<Dmatakuliah/>}/>
+        <Route path="/ddosen" element={<Ddosen/>}/>
+        <Route path="/dkelas" element={<Dkelas/>}/>
+        <Route path="/dmatakuliah" element={<Dmatakuliah/>}/>
       </Route>
     </Routes>
     </BrowserRouter>
