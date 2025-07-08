@@ -15,7 +15,7 @@ export default function Dashboard() {
     <div className="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
         <ul className="flex flex-col pl-0 mb-0">
         <li className="mt-0.5 w-full">
-            <a className="py-2.7 bg-blue-500/13 dark:text-white dark:opacity-80 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold text-slate-700 transition-colors" href="../pages/dashboard.html">
+            <a className="py-2.7 bg-blue-500/13 dark:text-white dark:opacity-80 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold text-slate-700 transition-colors" href="../dashboard">
             <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                 <i className="relative top-0 text-sm leading-normal text-blue-500 ni ni-tv-2" />
             </div>
@@ -23,7 +23,7 @@ export default function Dashboard() {
             </a>
         </li>
         <li className="mt-0.5 w-full">
-            <a className=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="../pages/tables.html">
+            <a className=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="../ddosen">
             <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                 <i className="relative top-0 text-sm leading-normal text-orange-500 ni ni-calendar-grid-58" />
             </div>
@@ -31,7 +31,7 @@ export default function Dashboard() {
             </a>
         </li>
         <li className="mt-0.5 w-full">
-            <a className=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="../pages/billing.html">
+            <a className=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="../dmatakuliah">
             <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center fill-current stroke-0 text-center xl:p-2.5">
                 <i className="relative top-0 text-sm leading-normal text-emerald-500 ni ni-credit-card" />
             </div>
@@ -39,7 +39,7 @@ export default function Dashboard() {
             </a>
         </li>
         <li className="mt-0.5 w-full">
-            <a className=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="../pages/virtual-reality.html">
+            <a className=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="../dkelas">
             <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                 <i className="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app" />
             </div>
@@ -50,12 +50,12 @@ export default function Dashboard() {
     </div>
     </aside>
 
-    {/* table 1 */}
+    {/*Table Data Mahasiswa */}
      <div className="flex flex-wrap -mx-3">
       <div className="flex-none w-full max-w-full px-3">
         <div className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
           <div className="p-6 pb-0 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
-            <h6 className="dark:text-white">Authors table</h6>
+            <h6 className="dark:text-white"> List Mahasiswa</h6>
           </div>
           <div className="flex-auto px-0 pt-0 pb-2">
             <div className="p-0 overflow-x-auto">
