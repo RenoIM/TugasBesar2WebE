@@ -29,7 +29,7 @@ export default function MahasiswaForm({
     if (editData) setFormData(editData);
   }, [editData]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<any>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: name === "semester" || name === "status" ? +value : value });
   };
@@ -101,6 +101,7 @@ export default function MahasiswaForm({
       id="status"
       name="status"
       value={formData.status}
+      onChange={handleChange}
       className="w-full px-4 py-2 border rounded-md dark:bg-slate-700 dark:border-slate-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
       <option value={1}>Aktif</option>
